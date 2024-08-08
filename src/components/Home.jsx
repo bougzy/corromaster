@@ -1,14 +1,10 @@
 import React, { useState } from "react";
 import { Carousel, Container, Card, Row, Col, Modal, Button, Image } from 'react-bootstrap';
 import AnimatedSection from './AnimatedSection';
-import Carded from "./Carded"
-import cleva from "../assets/clev.png"
 import coro from "../assets/coro.jpeg"
 import cap from "../assets/cap.png"
 import v from "../assets/v.png"
 import fu from "../assets/fu.png"
-import rifiney from "../assets/rifiney.png"
-import offz from "../assets/offz.png"
 import z from "../assets/z.png"
 import prod from "../assets/prod.png"
 import yk from "../assets/yk.png"
