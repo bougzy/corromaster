@@ -1,32 +1,32 @@
 import React from 'react';
 import { Container, Nav, Image, Navbar as BootstrapNavbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import coro from "../assets/coro.jpeg"
+import necoro from "../assets/newlogo.png"
 
 const Navbar = () => {
   return (
-    <BootstrapNavbar bg="primary " expand="lg" className="p-4">
+    <BootstrapNavbar bg="white " expand="lg" className="p-4">
       <Container>
         <BootstrapNavbar.Brand href="/">
-        <Image src={coro} roundedCircle className="me-2 w-100" />
+        <Image src={necoro}  className="me-2" style={{width:"120px", }} />
         </BootstrapNavbar.Brand>
         <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
         <BootstrapNavbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
+          <Nav className="mx-auto">
             <LinkContainer to="/">
-              <Nav.Link className="text-white">Home</Nav.Link>
+              <Nav.Link className="text-primary fw-bold">Home</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/about">
-              <Nav.Link className="text-white">About</Nav.Link>
+              <Nav.Link className="text-primary fw-bold">About</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/services">
-              <Nav.Link className="text-white">Services</Nav.Link>
+              <Nav.Link className="text-primary fw-bold">Services</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/projects">
-              <Nav.Link className="text-white">Projects</Nav.Link>
+              <Nav.Link className="text-primary fw-bold">Projects</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/contact">
-              <Nav.Link className="text-white">Contact</Nav.Link>
+              <Nav.Link className="text-primary fw-bold">Contact</Nav.Link>
             </LinkContainer>
           </Nav>
         </BootstrapNavbar.Collapse>
