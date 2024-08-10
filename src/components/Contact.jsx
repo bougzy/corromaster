@@ -4,6 +4,7 @@ import AnimatedSection from './AnimatedSection';
 
 const Contact = () => {
   return (
+    <div className="bg-secondary text-white p-2 mb-2">
     <AnimatedSection animationClass="animate__fadeInUp">
       <Container className="my-5">
         <h2>Contact Us</h2>
@@ -25,12 +26,12 @@ const Contact = () => {
                 <Form.Control type="text" placeholder="Enter subject" />
               </Form.Group>
 
-              <Form.Group controlId="formMessage">
+              <Form.Group controlId="formMessage" className="mb-2">
                 <Form.Label>Message</Form.Label>
                 <Form.Control as="textarea" rows={3} placeholder="Enter your message" />
               </Form.Group>
 
-              <Button variant="primary" type="submit">
+              <Button variant="primary" type="submit" CLASSnAME="mt-3">
                 Submit
               </Button>
             </Form>
@@ -43,17 +44,19 @@ const Contact = () => {
               to us using the contact form, email, or phone.
             </p>
             <ul>
-              <li><strong>Email:</strong> contact@company.com</li>
-              <li><strong>Phone:</strong> +1 234 567 890</li>
-              <li><strong>Address:</strong> 123 Main Street, Anytown, USA</li>
+              <li><strong>Email:</strong>  info@Corromasters.com </li>
+              <li><strong>Phone:</strong>  +234-09093237110, 234-7035877639</li>
+              <li><strong>Address:</strong> Plot 30 Ken Saro-wiwa Road, 2nd Floor
+              Rumuomasi, Port Harcourt, Rivers State</li>
             </ul>
           </Col>
         </Row>
-        <Alert variant="success" className="mt-4">
+        {/* <Alert variant="success" className="mt-4">
           Thank you for reaching out to us. We will get back to you as soon as possible.
-        </Alert>
+        </Alert> */}
       </Container>
     </AnimatedSection>
+    </div>
   );
 };
 

@@ -1,103 +1,60 @@
-import React from 'react';
-import { Container, Card, Row, Col, Button } from 'react-bootstrap';
-import AnimatedSection from './AnimatedSection';
+import React, { useState } from 'react';
+import { Container, Row, Col, Image, Modal } from 'react-bootstrap';
+import Slide26 from '../assets/Slide26.png';
+import Slide23 from '../assets/Slide23.png';
+import Slide24 from '../assets/Slide24.png';
+import Slide25 from '../assets/Slide25.png';
+import Slide20 from '../assets/Slide20.png';
+import Slide21 from '../assets/Slide21.png';
 
-const Projects = () => {
+const ImageGallery = () => {
+  const images = [
+    { id: 1, src: Slide26, alt: 'Vision Image' },
+    { id: 2, src: Slide23, alt: 'Hall of Fame Image' },
+    { id: 3, src: Slide24, alt: 'Hat Image' },
+    { id: 4, src: Slide25, alt: 'Placeholder Image' },
+    { id: 5, src: Slide20, alt: 'Placeholder Image' },
+    { id: 6, src: Slide21, alt: 'Placeholder Image' }
+  ];
+
+  const [show, setShow] = useState(false);
+  const [selectedImage, setSelectedImage] = useState({});
+
+  const handleClose = () => setShow(false);
+  const handleShow = (image) => {
+    setSelectedImage(image);
+    setShow(true);
+  };
+
   return (
-    <AnimatedSection animationClass="animate__fadeInUp">
-      <Container className="my-5">
-        <h2>Our Projects</h2>
-        <Row>
-          <Col md={4}>
-            <Card className="mb-4">
-              <Card.Img variant="top" src="https://via.placeholder.com/600x400" />
-              <Card.Body>
-                <Card.Title>Project 1: E-commerce Platform</Card.Title>
-                <Card.Text>
-                  <strong>Client:</strong> ABC Retailers<br/>
-                  <strong>Objective:</strong> Develop an online platform for seamless shopping experiences.<br/>
-                  <strong>Outcome:</strong> Increased sales by 30% within the first six months.
-                </Card.Text>
-                <Button variant="primary">View Details</Button>
-              </Card.Body>
-            </Card>
+    <div className="bg-secondary p-5">
+    <Container className="my-4">
+      <h3 className="bg-white p-3 rounded-2 text-danger text-center fw-bold">PROJECTS BY ACTION</h3>
+      <Row>
+        {images.map((image) => (
+          <Col key={image.id} xs={12} md={6} lg={6}>
+            <Image
+              src={image.src}
+              alt={image.alt}
+              thumbnail
+              onClick={() => handleShow(image)}
+              style={{ cursor: 'pointer', width: '200%', height: 'auto' }}
+            />
           </Col>
-          <Col md={4}>
-            <Card className="mb-4">
-              <Card.Img variant="top" src="https://via.placeholder.com/600x400" />
-              <Card.Body>
-                <Card.Title>Project 2: Mobile Banking App</Card.Title>
-                <Card.Text>
-                  <strong>Client:</strong> XYZ Bank<br/>
-                  <strong>Objective:</strong> Create a user-friendly mobile app for banking transactions.<br/>
-                  <strong>Outcome:</strong> Achieved a 95% user satisfaction rate.
-                </Card.Text>
-                <Button variant="primary">View Details</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={4}>
-            <Card className="mb-4">
-              <Card.Img variant="top" src="https://via.placeholder.com/600x400" />
-              <Card.Body>
-                <Card.Title>Project 3: Healthcare Management System</Card.Title>
-                <Card.Text>
-                  <strong>Client:</strong> HealthCare Solutions<br/>
-                  <strong>Objective:</strong> Implement a comprehensive management system for healthcare facilities.<br/>
-                  <strong>Outcome:</strong> Improved operational efficiency by 40%.
-                </Card.Text>
-                <Button variant="primary">View Details</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={4}>
-            <Card className="mb-4">
-              <Card.Img variant="top" src="https://via.placeholder.com/600x400" />
-              <Card.Body>
-                <Card.Title>Project 4: Smart Home Automation</Card.Title>
-                <Card.Text>
-                  <strong>Client:</strong> SmartLiving Corp<br/>
-                  <strong>Objective:</strong> Develop an integrated smart home solution.<br/>
-                  <strong>Outcome:</strong> Enhanced user convenience and energy efficiency.
-                </Card.Text>
-                <Button variant="primary">View Details</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={4}>
-            <Card className="mb-4">
-              <Card.Img variant="top" src="https://via.placeholder.com/600x400" />
-              <Card.Body>
-                <Card.Title>Project 5: Educational Platform</Card.Title>
-                <Card.Text>
-                  <strong>Client:</strong> EduTech Innovators<br/>
-                  <strong>Objective:</strong> Create an online platform for educational resources.<br/>
-                  <strong>Outcome:</strong> Engaged over 10,000 users within the first year.
-                </Card.Text>
-                <Button variant="primary">View Details</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={4}>
-            <Card className="mb-4">
-              <Card.Img variant="top" src="https://via.placeholder.com/600x400" />
-              <Card.Body>
-                <Card.Title>Project 6: Logistics Management System</Card.Title>
-                <Card.Text>
-                  <strong>Client:</strong> Global Logistics Co<br/>
-                  <strong>Objective:</strong> Streamline logistics operations with an advanced management system.<br/>
-                  <strong>Outcome:</strong> Reduced operational costs by 20%.
-                </Card.Text>
-                <Button variant="primary">View Details</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-    </AnimatedSection>
+        ))}
+      </Row>
+
+      <Modal show={show} onHide={handleClose} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>{selectedImage.alt}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Image src={selectedImage.src} alt={selectedImage.alt} fluid style={{ width: '200%', height: '300px' }} />
+        </Modal.Body>
+      </Modal>
+    </Container>
+    </div>
   );
 };
 
-export default Projects;
+export default ImageGallery;

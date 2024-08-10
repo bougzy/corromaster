@@ -26,6 +26,7 @@ a:hover {
 body {
   /* Optional: Adjust font size for body text */
   font-size: 1rem;
+  background:lightgrey;
 }
 
 h1 {
