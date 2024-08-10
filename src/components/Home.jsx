@@ -83,8 +83,7 @@ const carouselImageStyle = {
         />
         <div style={captionContainerStyle}>
           <div>
-            <h3>Innovative Solutions</h3>
-            <p>Leading the way in cutting-edge technology and design.</p>
+            <h3>Pipelines needs…. Our Solutions</h3>
           </div>
         </div>
       </Carousel.Item>
@@ -98,8 +97,8 @@ const carouselImageStyle = {
         />
         <div style={captionContainerStyle}>
           <div>
-            <h3>Innovative Solutions</h3>
-            <p>Leading the way in cutting-edge technology and design.</p>
+            <h3>Power Generation needs…. Our Solutions</h3>
+           
           </div>
         </div>
       </Carousel.Item>
@@ -113,8 +112,8 @@ const carouselImageStyle = {
         />
         <div style={captionContainerStyle}>
           <div>
-            <h3>Innovative Solutions</h3>
-            <p>Leading the way in cutting-edge technology and design.</p>
+            <h3>Marine needs…. Our Solutions</h3>
+            
           </div>
         </div>
       </Carousel.Item>
@@ -128,8 +127,9 @@ const carouselImageStyle = {
         />
         <div style={captionContainerStyle}>
           <div>
-            <h3>Innovative Solutions</h3>
-            <p>Leading the way in cutting-edge technology and design.</p>
+            <h3>FLNG needs…our Solutions
+            </h3>
+            
           </div>
         </div>
       </Carousel.Item>
@@ -143,8 +143,9 @@ const carouselImageStyle = {
         />
         <div style={captionContainerStyle}>
           <div>
-            <h3>Innovative Solutions</h3>
-            <p>Leading the way in cutting-edge technology and design.</p>
+            <h3>FPSO needs…our Solutions
+            </h3>
+           
           </div>
         </div>
       </Carousel.Item>
@@ -158,8 +159,8 @@ const carouselImageStyle = {
         />
         <div style={captionContainerStyle}>
           <div>
-            <h3>Innovative Solutions</h3>
-            <p>Leading the way in cutting-edge technology and design.</p>
+            <h3>Offshore Platform needs…. Our Solutions</h3>
+            
           </div>
         </div>
       </Carousel.Item>
@@ -173,41 +174,12 @@ const carouselImageStyle = {
         />
         <div style={captionContainerStyle}>
           <div>
-            <h3>Innovative Solutions</h3>
-            <p>Leading the way in cutting-edge technology and design.</p>
+            <h3>Refinery/Chemical needs…. Our Solutions</h3>
+           
           </div>
         </div>
       </Carousel.Item>
-      <Carousel.Item>
-        <div style={overlayStyle}></div> {/* Overlay */}
-        <img
-          className="d-block w-100"
-          src={berge}
-          alt="First slide"
-          style={carouselImageStyle}
-        />
-        <div style={captionContainerStyle}>
-          <div>
-            <h3>Innovative Solutions</h3>
-            <p>Leading the way in cutting-edge technology and design.</p>
-          </div>
-        </div>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div style={overlayStyle}></div> {/* Overlay */}
-        <img
-          className="d-block w-100"
-          src="https://irp.cdn-website.com/818538c1/dms3rep/multi/oil+refinery+in+Atlanta-+GA.jpeg"
-          alt="Second slide"
-          style={carouselImageStyle}
-        />
-        <div style={captionContainerStyle}>
-          <div>
-            <h3>Customer Satisfaction</h3>
-            <p>Our commitment is to you, ensuring quality and satisfaction.</p>
-          </div>
-        </div>
-      </Carousel.Item>
+     
     </Carousel>
 
       {/* Welcome Section */}
@@ -216,7 +188,7 @@ const carouselImageStyle = {
         <Container className="text-center my-5 text-primary">
           <h2 className="fw-bold">Welcome to Corromasters</h2>
           <p className="lead">
-          Welcome to Corromasters Limited, your trusted asset integrity partner with fourth digital industrial revolutionize approach in comprehensive engineering, inspection and corrosion management solutions. With the dedicated professional team of experts and decades of vast experience in the field, our concern is to bring solution to your challenges and protecting your valuable assets from the ageing damaging effects of corrosion and unplanned shutdown. Our mission is to deliver innovative, cost-effective, and sustainable asset integrity, reliability inspection, corrosion prevention and control strategies tailored to meet the unique needs of our clientele.
+         Your trusted asset integrity partner with fourth digital industrial revolutionize approach in comprehensive engineering, inspection and corrosion management solutions. With the dedicated professional team of experts and decades of vast experience in the field, our concern is to bring solution to your challenges and protecting your valuable assets from the ageing damaging effects of corrosion and unplanned shutdown. Our mission is to deliver innovative, cost-effective, and sustainable asset integrity, reliability inspection, corrosion prevention and control strategies tailored to meet the unique needs of our clientele.
           </p>
         </Container>
       </AnimatedSection>
@@ -239,7 +211,7 @@ const carouselImageStyle = {
           <ul className="list-unstyled">
             <li className="d-flex align-items-center mb-3">
               <Image src={coro} roundedCircle className="me-2" />
-              <span>Est. 2003, professionally managed Company Over 250 projects executed till date.</span>
+              <span>Established in 2003, professionally managed Company Over 250 projects executed till date.</span>
             </li>
             <li className="d-flex align-items-center mb-3">
               <Image src={coro} roundedCircle className="me-2" />
@@ -276,37 +248,32 @@ const carouselImageStyle = {
 
            
       {/* Our Mission Section */}
-      <div style={{marginTop:"100px"}}> 
+      
+      <div style={{marginTop:"100px"}} className=""> 
       <AnimatedSection animationClass="animate__fadeIn">
-        <Container className="my-5">
-            <h1 className="text-center fw-bold text-primary mb-2">CML Vision & Mission</h1>
+        <Container className="my-5 mx-auto">
+            {/* <h1 className="text-center fw-bold text-primary mb-2">CML Vision & Mission</h1> */}
           <Row>
-            <Col md={6}>
-              <Image src={vision} 
-              className="img-fluid rounded w-100" />
+            <Col md={6} className="order-2">
+              <Image src={vision}
+              className="img-fluid rounded w-50" />
             </Col>
-            <Col md={6}>
-            <h2 className="text-center text-danger fw-bold">Our Vision</h2>
+            <Col md={6} className="">
+            <h2 className="text-center text-danger fw-bold">
+              <img src="" />
+              Our Vision</h2>
               <p className="text-primary">
               Our Vision is to become a World class engineering, Process Control, construction,
 Corrosion, Inspection, Asset Integrity and innovative technology by building a
 value adding and safe business, manned by highly motivated and competent
 Nigerians globally
               </p>
-           
             </Col>
           </Row>
-        </Container>
-      </AnimatedSection>
-      </div>
-      <div style={{marginTop:"100px"}}> 
-      <AnimatedSection animationClass="animate__fadeIn">
-        <Container className="my-5">
-            {/* <h1 className="text-center fw-bold text-primary mb-2">CML Vision & Mission</h1> */}
           <Row>
-            <Col md={6} className="order-2">
+            <Col md={6} className="order-2 mt-4">
               <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLB5QwZdJ6s99l98wRevG1pUQwetAUGExs1w&s"
-              className="img-fluid rounded w-100" />
+              className="img-fluid rounded w-50" />
             </Col>
             <Col md={6} className="">
             <h2 className="text-center text-danger fw-bold">Our Mission</h2>
@@ -316,11 +283,14 @@ engaging the industry and its stakeholders, facilitating business opportunities 
 promoting the highest standards in the Oil, Gas & Energy industry.
 Our Mission is to contribute to the country’s economic progress, by providing
 reliable and efficient management of the operation technology.
-Our person...our technology...our service...our performance, is the heart of
-Corromasters Limited
+
               </p>
+              <p className="text-primary fw-bold">Our person...our technology...our service...our performance, is the heart of
+              Corromasters Limited</p>
             </Col>
           </Row>
+          <p className="text-danger fw-bold">VISION 2030: GREATLY DEVELOP; GREATLY DEPLOY; GREATLY IMPLEMENT; GREATLY
+          <br/>ACHIEVE. IT’S A CENTRE FOR EXCELLENCE TO VISUALIZE</p>
         </Container>
       </AnimatedSection>
       </div>
